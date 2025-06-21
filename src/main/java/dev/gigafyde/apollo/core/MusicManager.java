@@ -21,9 +21,9 @@ import com.sedmelluq.discord.lavaplayer.source.soundcloud.SoundCloudAudioSourceM
 import com.sedmelluq.discord.lavaplayer.source.twitch.TwitchStreamAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.source.vimeo.VimeoAudioSourceManager;
 import com.sedmelluq.discord.lavaplayer.source.yamusic.YandexMusicAudioSourceManager;
-import dev.lavalink.youtube.clients.AndroidWithThumbnail;
-import dev.lavalink.youtube.clients.MusicWithThumbnail;
-import dev.lavalink.youtube.clients.WebWithThumbnail;
+import dev.lavalink.youtube.clients.Android;
+import dev.lavalink.youtube.clients.Music;
+import dev.lavalink.youtube.clients.Web;
 import dev.lavalink.youtube.clients.skeleton.Client;
 import net.dv8tion.jda.api.entities.Guild;
 import dev.lavalink.youtube.YoutubeAudioSourceManager;
@@ -36,7 +36,7 @@ public final class MusicManager {
     public MusicManager() {
 
         this.musicManagers = new HashMap<>();
-        playerManager.registerSourceManager(new YoutubeAudioSourceManager(/*allowSearch:*/ true, new Client[]{new MusicWithThumbnail(), new WebWithThumbnail(), new AndroidWithThumbnail()}));
+        playerManager.registerSourceManager(new YoutubeAudioSourceManager(/*allowSearch:*/ true, new Client[]{new Music(), new Web(), new Android()}));
         playerManager.registerSourceManager(new YandexMusicAudioSourceManager(true));
         playerManager.registerSourceManager(SoundCloudAudioSourceManager.createDefault());
         playerManager.registerSourceManager(new BandcampAudioSourceManager());

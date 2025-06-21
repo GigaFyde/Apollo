@@ -253,6 +253,18 @@ public class CommandEvent implements SlashCommandInteraction, MessageContextInte
 
     @NotNull
     @Override
+    public InteractionContextType getContext() {
+        return null;
+    }
+
+    @NotNull
+    @Override
+    public IntegrationOwners getIntegrationOwners() {
+        return null;
+    }
+
+    @NotNull
+    @Override
     public InteractionHook getHook() {
         switch (type) {
             case SLASH -> {

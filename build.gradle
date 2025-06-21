@@ -12,19 +12,20 @@ targetCompatibility = 17
 repositories {
     mavenCentral()
     maven { url 'https://jitpack.io' }
+    maven { url 'https://maven.lavalink.dev/releases' }
 }
 
 dependencies {
-    implementation 'net.dv8tion:JDA:5.0.0-beta.22'
+    implementation 'net.dv8tion:JDA:5.6.1'
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
     implementation 'com.google.code.gson:gson:2.10'
     implementation 'com.google.guava:guava:33.0.0-jre'
     implementation 'org.codehaus.groovy:groovy-all:3.0.14'
     implementation 'io.sentry:sentry-logback:6.28.0'
-    implementation 'dev.arbjerg:lavaplayer:2.1.1'
+    implementation 'dev.arbjerg:lavaplayer:2.2.4'
 //    implementation 'com.github.lavalink-devs.lavaplayer:lavaplayer:use-web-client-SNAPSHOT'
-    implementation 'com.github.lavalink-devs.youtube-source:common:1.0.4'
-    implementation 'com.github.lavalink-devs.youtube-source:lldevs:1.0.4'
+    implementation("dev.lavalink.youtube:common:1.13.3")
+
 
     implementation 'org.json:json:20231013'
 }
